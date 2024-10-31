@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PopIn-PaymentForm-.NET.props" />
+</Project>

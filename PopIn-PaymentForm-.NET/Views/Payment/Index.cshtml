@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@{
+    PaymentModel gm = new PaymentModel();
+    ViewData["url"] = gm.URL_ENDPOINT;
+    ViewData["js_token"] = gm.KEY_JS;
+}
+
+<div class="container payment-form">
+    <h2 class="title">Formulario de Pago</h2>
+    <!-- otro estilo para el formulario class="kr-smart-form"   -->
+    <div class="kr-embedded" kr-popin kr-form-token="@ViewBag.token">
+        <div class="kr-pan"></div>
+        <div class="kr-expiry"></div>
+        <div class="kr-security-code"></div>
+        <!-- campos adicionales-->
+        <div class="kr-card-holder-mail"></div>
+        <!--<div class="kr-identity-document-type"></div>
+        <div class="kr-identity-document-number"></div>-->
+
+        <!-- payment form submit button -->
+        <button class="kr-payment-button"></button>
+
+        <!-- error zone -->
+        <div class="kr-form-error"></div>
+    </div>
+</div>
+
+@section Extracss {
+                  <style>
+                    .container {
+                        margin: 20px auto;
+                        padding: 20px;
+                        background-color: #fff;
+                        border-radius: 12px;
+                        width: 95%; 
+                        max-width: 1200px; 
+                        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                        overflow: auto; 
+                    }
+
+                    .title {
+                        color: #333;
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+
+                </style>
+}

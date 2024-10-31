@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col">
+        <div class="card p-4">
+            <h4 class="mb-1 text-center">Datos del comprador</h4>
+            <hr class="w-100 mb-4">
+            <form class="needs-validation" novalidate="" method="post" action="/Payment/">
+                <div class="row g-3">
+
+                    @*NOMBRE*@
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">Nombre</label>
+                        <input name="txt_nombre" type="text" class="form-control" id="firstName" placeholder="Escribe tu nombre" value="" required="">
+                    </div>
+                    @*APELLIDO*@
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Apellido</label>
+                        <input name="txt_apellido" type="text" class="form-control" id="lastName" placeholder="Escribe tu apellido" value="" required="">
+                    </div>
+                    @*EMAIL*@
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo</label>
+                        <input name="txt_correo" type="text" class="form-control" id="email" placeholder="Escribe tu correo" value="" required="">
+                    </div>
+
+                    @*MONTO*@
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Monto Total</label>
+                        <input name="txt_monto" type="text" class="form-control" id="amount" placeholder="S/." value="" required="">
+                    </div>
+
+
+                    @*MONEDA*@
+                    <div class="mb-3">
+                        <label for="coin" class="form-label">Moneda</label>
+                        <input name="Moneda" type="text" class="form-control" id="coin" placeholder="PEN" value="PEN" readonly="readonly">
+                    </div>
+
+                </div>
+
+
+                <button class="btn btn-izi w-50 mx-auto text-white mt-2" type="submit">Ir al Pago</button>
+            </form>
+        </div>
+    </div>
+</div>
+
